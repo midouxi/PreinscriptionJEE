@@ -13,10 +13,14 @@
     </head>
     <body>
         <h1>Inscription á l'université Hassan 1st!</h1>
-        <form method="POST" action="InscriptionServlet"/>
+        <form method="POST" action="InscriptionServlet">
             CNE : <input type="text" name="cne" />: ر.و.ت <br /><br /><br />
             <input type="submit" name="action1" value="Formulaire en Français" />
             <input type="submit" name="action2" value="استمارة باللغة العربية" />
         </form>
+        <br /><br />
+        <% if(request.getAttribute("alerte")!=null) { 
+            out.println(request.getAttribute("alerte"));
+        }%>
     </body>
 </html>

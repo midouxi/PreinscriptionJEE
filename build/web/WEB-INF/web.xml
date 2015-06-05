@@ -16,6 +16,10 @@
         <servlet-name>AdminModifServlet</servlet-name>
         <servlet-class>Servlet.AdminModifServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MenuServlet</servlet-name>
+        <servlet-class>Servlet.MenuServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InscriptionServlet</servlet-name>
         <url-pattern>/InscriptionServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>AdminModifServlet</servlet-name>
         <url-pattern>/AdminModifServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MenuServlet</servlet-name>
+        <url-pattern>/MenuServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

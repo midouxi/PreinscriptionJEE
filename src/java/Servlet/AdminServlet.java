@@ -82,7 +82,7 @@ public class AdminServlet extends HttpServlet {
 
           
           
-          ResultSet rs = statement. executeQuery("SELECT personnelle.n_inscription,personnelle.cne,personnelle.nom,personnelle.prenom,personnelle.etablissement,baccalaureat.serie_bac,baccalaureat.moy_EN,baccalaureat.filiere,baccalaureat.date_inscription FROM personnelle INNER JOIN baccalaureat on personnelle.n_inscription=baccalaureat.n_inscription WHERE baccalaureat.valide = "+valide+"");
+          ResultSet rs = statement. executeQuery("SELECT personnelle.n_inscription,personnelle.cne,personnelle.nom,personnelle.prenom,personnelle.etablissement,baccalaureat.serie_bac,baccalaureat.moy_EN,baccalaureat.filiere,baccalaureat.date_inscription FROM personnelle INNER JOIN baccalaureat on personnelle.n_inscription=baccalaureat.n_inscription WHERE baccalaureat.valide ='"+valide+"' AND baccalaureat.supprime='0'");
 
           while(rs.next() ){
      

@@ -116,11 +116,11 @@ public class InscriptionServlet extends HttpServlet {
             } else {
                 this.getServletContext().getRequestDispatcher("/WEB-INF/inscription4_ar.jsp").forward(request, response);
             }
-        }
-        else if(request.getParameter("download")!=null && request.getParameter("n_inscription")!=null){
+        } else if(request.getParameter("download")!=null && request.getParameter("n_inscription")!=null){
             //download un pdf
             System.out.println("c bon");
         } else if(request.getParameter("action1")!=null || request.getParameter("action2")!=null ) {
+            System.out.println("nyyyyup");
                 request.setAttribute("cne", request.getParameter("cne"));
                 ArrayList l = LectureFichier();
                 if(l.contains(request.getParameter("cne"))){
@@ -139,12 +139,17 @@ public class InscriptionServlet extends HttpServlet {
                                 request.setAttribute("nom",nom);  
                                 request.setAttribute("prenom",prenom);
                                 System.out.println(nom+prenom);
-                                 this.getServletContext().getRequestDispatcher("/WEB-INF/inscription1_ar.jsp").forward(request, response);
-                            }
+                                this.getServletContext().getRequestDispatcher("/WEB-INF/inscription1_ar.jsp").forward(request, response);
+                            } 
                         }
                     } 
-                } 
-            }
+                } else { 
+                                request.setAttribute("alerte", "Votre CNE ne figure pas dans la liste des admis ! En cas d'erreur Veuillez contacter l'administation");
+                                this.getServletContext().getRequestDispatcher("/WEB-INF/inscription0.jsp").forward(request, response);
+                }
+        } else {
+            System.out.println("eroooooooooor");
+        }
        
     }
     

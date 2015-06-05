@@ -23,6 +23,30 @@ public class AdminModifServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String n_inscription = request.getParameter("ninsc");
+        request.setAttribute("cne", extractor(n_inscription,"personnelle","cne"));
+        request.setAttribute("nom", extractor(n_inscription,"personnelle","nom"));
+        request.setAttribute("prenom", extractor(n_inscription,"personnelle","prenom"));
+        request.setAttribute("date_naissance", extractor(n_inscription,"personnelle","date_naissance"));
+        request.setAttribute("ville_naissance", extractor(n_inscription,"personnelle","ville_naissance"));
+        request.setAttribute("pays_naissance", extractor(n_inscription,"personnelle","pays_naissance"));
+        request.setAttribute("nationalite", extractor(n_inscription,"personnelle","nationalite"));
+        request.setAttribute("cin", extractor(n_inscription,"personnelle","cin"));
+        request.setAttribute("date_cin", extractor(n_inscription,"personnelle","date_cin"));
+        request.setAttribute("adresse", extractor(n_inscription,"personnelle","adresse"));
+        request.setAttribute("ville", extractor(n_inscription,"personnelle","ville"));
+        request.setAttribute("pays", extractor(n_inscription,"personnelle","pays"));
+        request.setAttribute("tel", extractor(n_inscription,"personnelle","tel"));
+        request.setAttribute("email", extractor(n_inscription,"personnelle","email"));
+        request.setAttribute("photo", extractor(n_inscription,"personnelle","photo"));
+        request.setAttribute("nature_handicap", extractor(n_inscription,"personnelle","nature_handicap"));
+        request.setAttribute("num_carte_handicap", extractor(n_inscription,"personnelle","num_carte_handicap"));
+        request.setAttribute("bourse", extractor(n_inscription,"personnelle","bourse"));
+        request.setAttribute("activite", extractor(n_inscription,"personnelle","activite"));
+        
+        
+        
+        
         this.getServletContext().getRequestDispatcher("/WEB-INF/adminmodif1.jsp").forward(request, response);
     }
     

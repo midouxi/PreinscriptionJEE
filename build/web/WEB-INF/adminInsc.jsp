@@ -60,7 +60,7 @@
                 <td> 
                     <form action="MenuServlet" method="get"/>
                         <input type="submit" name="modifie" value="Modifier" />
-                        <input type="submit" name="suppr" value="Supprimer" />
+                        <input type="submit" name="suppr" value="Supprimer" onclick="return confirm('Etes-vous sûr que vous voulez supprimer ce compte ?')" />
                         <input type="submit" name="valid" value="Valider" />
                     </form>
                 </td>
