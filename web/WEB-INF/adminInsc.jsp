@@ -21,7 +21,7 @@
                         <li><a href="">Inscription</a></li>
                         <li><a href="adminpage2.php">Inscription final</a></li>
                         <li><a href="" >Chercher Etudiant </a></li>
-                        <li><a href="AjoutEtudiant.jsp" >Ajout Etudiant</a></li>
+                        <li><a href="ServletAjouterEtudiant" >Ajout Etudiant</a></li>
                         <li><a href="" >Statistique</a></li>
                         <li><a href="">Déconnexion</a></li>
                     </ul>

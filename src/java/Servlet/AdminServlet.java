@@ -9,9 +9,11 @@ import Beans.EtudiantBean;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -49,7 +51,7 @@ public class AdminServlet extends HttpServlet {
             request.setAttribute("alerte", "Combinaison login/Mot de passe est incorrecte");
             this.getServletContext().getRequestDispatcher("/WEB-INF/admin.jsp").forward(request, response);
         }
-       
+      
     }
     
     public boolean check(String login,String mdp){
