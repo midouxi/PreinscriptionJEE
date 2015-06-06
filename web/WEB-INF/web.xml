@@ -20,6 +20,18 @@
         <servlet-name>MenuServlet</servlet-name>
         <servlet-class>Servlet.MenuServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminSupprServlet</servlet-name>
+        <servlet-class>Servlet.AdminSupprServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminValidationServlet</servlet-name>
+        <servlet-class>Servlet.AdminValidationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminSearchServlet</servlet-name>
+        <servlet-class>Servlet.AdminSearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InscriptionServlet</servlet-name>
         <url-pattern>/InscriptionServlet</url-pattern>
@@ -39,6 +51,18 @@
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
         <url-pattern>/MenuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminSupprServlet</servlet-name>
+        <url-pattern>/AdminSupprServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminValidationServlet</servlet-name>
+        <url-pattern>/AdminValidationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminSearchServlet</servlet-name>
+        <url-pattern>/AdminSearchServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

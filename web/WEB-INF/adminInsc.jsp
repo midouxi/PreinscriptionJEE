@@ -20,7 +20,7 @@
                     <ul>
                         <li><a href="adminpage.php">Inscription</a></li>
                         <li><a href="adminpage2.php">Inscription final</a></li>
-                        <li><a href="logoutadmin.php" >Chercher Etudiant </a></li>
+                        <li><a href="AdminSearchServlet" >Chercher Etudiant </a></li>
                         <li><a href="logoutadmin.php" >Ajout Etudiant</a></li>
                         <li><a href="logoutadmin.php" >Statistique</a></li>
                         <li><a href="logoutadmin.php" >Déconnexion</a></li>
@@ -58,10 +58,17 @@
                 <td class="style1"><%  out.println(i.getEtablissement());%></td>
                 <td class="style1"><%  out.println(i.getFiliere());%></td>
                 <td> 
-                    <form action="MenuServlet" method="get"/>
+                    <form action="AdminModifServlet" method="get"/>
                         <input type="submit" name="modifie" value="Modifier" />
+                        <input type="hidden" name="ninsc" value="<% out.print(i.getN_inscription());%>" />
+                    </form>
+                    <form action="AdminSupprServlet" method="get"/>
                         <input type="submit" name="suppr" value="Supprimer" onclick="return confirm('Etes-vous sûr que vous voulez supprimer ce compte ?')" />
+                        <input type="hidden" name="ninsc" value="<% out.print(i.getN_inscription());%>" />
+                    </form>
+                    <form action="AdminValidationServlet" method="get"/>
                         <input type="submit" name="valid" value="Valider" />
+                        <input type="hidden" name="ninsc" value="<% out.print(i.getN_inscription());%>" />
                     </form>
                 </td>
                
