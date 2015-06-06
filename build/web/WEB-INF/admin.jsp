@@ -19,7 +19,7 @@
             <input type="submit" value="Se connecter" />
         </form>
         <% if(request.getAttribute("alerte")!=null) {
-            out.println(request.getAttribute("alerte").toString()); }%></p
+            out.println(request.getAttribute("alerte").toString()); }%></p>
             
     </body>
 </html>

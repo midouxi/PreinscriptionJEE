@@ -6,6 +6,11 @@
 package Servlet;
 
 import Beans.EtudiantBean;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,6 +20,7 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,14 +41,15 @@ public class AdminServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         if(check(request.getParameter("login"),request.getParameter("mdp"))) {
-            System.out.println("mehdi");
             request.setAttribute("e", Display(0));
+            request.getSession().setAttribute("login",request.getParameter("login"));
             this.getServletContext().getRequestDispatcher("/WEB-INF/adminInsc.jsp").forward(request, response);
         }
         else {
             request.setAttribute("alerte", "Combinaison login/Mot de passe est incorrecte");
             this.getServletContext().getRequestDispatcher("/WEB-INF/admin.jsp").forward(request, response);
         }
+       
     }
     
     public boolean check(String login,String mdp){
@@ -122,6 +129,6 @@ public class AdminServlet extends HttpServlet {
     }
     
     public void ajouteretudiant(){
-        
+       
     }
 }

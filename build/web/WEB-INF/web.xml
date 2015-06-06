@@ -20,6 +20,10 @@
         <servlet-name>MenuServlet</servlet-name>
         <servlet-class>Servlet.MenuServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAjouterEtudiant</servlet-name>
+        <servlet-class>Servlet.ServletAjouterEtudiant</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InscriptionServlet</servlet-name>
         <url-pattern>/InscriptionServlet</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
         <url-pattern>/MenuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAjouterEtudiant</servlet-name>
+        <url-pattern>/ServletAjouterEtudiant</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

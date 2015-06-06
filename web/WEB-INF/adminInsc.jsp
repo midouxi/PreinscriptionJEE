@@ -18,12 +18,12 @@
             <div>
                 <div>
                     <ul>
-                        <li><a href="adminpage.php">Inscription</a></li>
+                        <li><a href="">Inscription</a></li>
                         <li><a href="adminpage2.php">Inscription final</a></li>
-                        <li><a href="logoutadmin.php" >Chercher Etudiant </a></li>
-                        <li><a href="logoutadmin.php" >Ajout Etudiant</a></li>
-                        <li><a href="logoutadmin.php" >Statistique</a></li>
-                        <li><a href="logoutadmin.php" >Déconnexion</a></li>
+                        <li><a href="" >Chercher Etudiant </a></li>
+                        <li><a href="AjoutEtudiant.jsp" >Ajout Etudiant</a></li>
+                        <li><a href="" >Statistique</a></li>
+                        <li><a href="">Déconnexion</a></li>
                     </ul>
                 </div>
             </div>

@@ -50,12 +50,14 @@ public class InscriptionServlet extends HttpServlet {
 
         
         if(request.getParameter("n_inscription")!=null){
+            request.getSession().setAttribute("numins",request.getParameter("n_inscription"));
            System.out.println(request.getParameter("n_inscription")); 
            request.setAttribute("numins", request.getParameter("n_inscription"));
         }
         
         if(request.getParameter("cne")!=null && request.getParameter("nom")!=null &&  request.getParameter("prenom")!=null && request.getParameter("date_naissance")!=null &&  request.getParameter("ville_naissance")!=null &&  request.getParameter("pays_naissance")!=null &&  request.getParameter("nationalite")!=null &&  request.getParameter("sexe")!=null &&  request.getParameter("cin")!=null &&  request.getParameter("date_cin")!=null &&  request.getParameter("adresse")!=null &&  request.getParameter("ville")!=null &&  request.getParameter("pays")!=null &&  request.getParameter("tel")!=null &&  request.getParameter("email")!=null && request.getPart("photo")!=null &&  request.getParameter("handicap")!=null &&  request.getParameter("nature_handicap")!=null &&  request.getParameter("num_carte_handicap")!=null &&  request.getParameter("bourse")!=null &&  request.getParameter("activite")!=null &&  request.getParameter("etablissement")!=null) {
 
+            request.getSession().setAttribute("cne",request.getParameter("cne"));
             String path = request.getServletContext().getRealPath("");
             final Part filePart = request.getPart("photo");
             final String fileName = getFileName(filePart);

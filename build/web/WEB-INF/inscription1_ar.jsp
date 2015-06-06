@@ -3,7 +3,14 @@
     Created on : 26 mai 2015, 13:37:53
     Author     : macbookpro
 --%>
+<%String cne=(String)request.getSession().getAttribute("cne");
 
+if(cne == null){
+    out.println("aucune session trouvé !");
+    response.sendRedirect("InscriptionServlet");
+}
+
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" xml:lang="ar">
