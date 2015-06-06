@@ -30,7 +30,7 @@
             </div>
         </div>
         <div lang="ar" dir="rtl" xml:lang="ar">
-         <form methde="GET" action="AdminServlet">
+         <form methde="GET" action="ServletAjouterEtudiant">
                 <center>
                 <table>
                     <tr><td></td><td></td><td><input type="text" name="cne"/></td><td>cne</td></tr>
